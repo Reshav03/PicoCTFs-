@@ -1,1 +1,1 @@
-# PicoCTFs-
+# PicoCTFs
