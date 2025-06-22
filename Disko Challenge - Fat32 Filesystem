@@ -21,11 +21,11 @@ In this challenge we have been given a disk image in the challenge
 
 Lets download this disk in the tmp directory in the webshell
 
-href=image (1).png
+![Step 1](Images/Disko_challenge/image%20(1).png)
 
 After download do the Gunzip to extract the disk image
 
-![image.png](attachment:aa745847-e5b4-4e54-b847-d3ad9b77abec:image.png)
+![Step 2](Images/Disko_challenge/image%20(2).png)
 
 Lets see the type of the file this is 
 
@@ -44,7 +44,7 @@ file filename
 
 ---
 
-![image.png](attachment:605ce1f4-7aee-4a5b-bdc1-9e4d0e855654:image.png)
+![Step 3](Images/Disko_challenge/image%20(3).png)
 
 We see that this image is a FAT32 filesystem
 
@@ -58,7 +58,7 @@ Extracting strings from a FAT32 filesystem typically means retrieving **human-re
 
 Lets now extract 
 
-![image.png](attachment:d75854d6-5492-4d15-9bc4-b2eff383fb01:image.png)
+![Step 4](Images/Disko_challenge/image%20(4).png)
 
 String command -
 
@@ -66,6 +66,6 @@ This command **extracts and views all human-readable text strings** from a **dis
 
 Now lets search for the flag
 
-![image.png](attachment:b23446a5-6e94-463f-99ac-ae84c60393c2:image.png)
+![Step 5](Images/Disko_challenge/image%20(5).png)
 
 And Ta-da we found it
