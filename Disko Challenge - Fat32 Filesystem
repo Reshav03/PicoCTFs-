@@ -1,0 +1,71 @@
+# Challenge Disko
+
+## Important Terminologies
+
+Commands Used
+
+- wget → to download the file
+- gunzip → to extract the file
+- file → to check the filetype
+- strings → to check the human-readable text strings from disk image
+- strings filename | less → for paged view
+- strings filename | grep → to get the flag
+
+Terminologies Grasped
+
+Fat32 Filesystem 
+
+And how to extract human-readable from that particular disk image  
+
+In this challenge we have been given a disk image in the challenge
+
+Lets download this disk in the tmp directory in the webshell
+
+![image.png](attachment:2c7455bf-439c-4baa-9eda-a7497222900f:image.png)
+
+After download do the Gunzip to extract the disk image
+
+![image.png](attachment:aa745847-e5b4-4e54-b847-d3ad9b77abec:image.png)
+
+Lets see the type of the file this is 
+
+Use the File command to check the file type
+
+The `file` command in Linux is used to **determine the type of a file** based on its **content**, not its extension.
+
+---
+
+### 📘 **Basic Syntax**
+
+```bash
+
+file filename
+```
+
+---
+
+![image.png](attachment:605ce1f4-7aee-4a5b-bdc1-9e4d0e855654:image.png)
+
+We see that this image is a FAT32 filesystem
+
+### 📂 What is a FAT32 Filesystem?
+
+**FAT32** stands for **File Allocation Table 32-bit**. It is a **legacy file system** created by Microsoft, widely used for removable drives and older operating systems.
+
+Now we need to extract strings from the FAT32 Filesystem 
+
+Extracting strings from a FAT32 filesystem typically means retrieving **human-readable text** from **binary files**, **disk images**, or **partitions**. This is often done in **digital forensics**, **malware analysis**, or **data recovery**.
+
+Lets now extract 
+
+![image.png](attachment:d75854d6-5492-4d15-9bc4-b2eff383fb01:image.png)
+
+String command -
+
+This command **extracts and views all human-readable text strings** from a **disk image file** called `disko-1.dd` using `strings`, and then pipes it through `less` for **paged viewing**.
+
+Now lets search for the flag
+
+![image.png](attachment:b23446a5-6e94-463f-99ac-ae84c60393c2:image.png)
+
+And Ta-da we found it
